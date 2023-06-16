@@ -1,0 +1,11 @@
+
+
+JMS_CONNECTION_FACTORY_TYPE=${JMS_CONNECTION_FACTORY_TYPE:-default-value}
+JMS_CONNECTION_FACTORY_FACTORY=${JMS_CONNECTION_FACTORY_FACTORY:-default-value}
+JMS_CONNECTION_FACTORY_BROKER_URL=${JMS_CONNECTION_FACTORY_BROKER_URL:-default-value}
+
+sed -i "s|\${JMS_CONNECTION_FACTORY_TYPE}|$JMS_CONNECTION_FACTORY_TYPE|g" /usr/local/tomcat/conf/context.xml \
+&& sed -i "s|\${JMS_CONNECTION_FACTORY_FACTORY}|$JMS_CONNECTION_FACTORY_FACTORY|g" /usr/local/tomcat/conf/context.xml \
+&& sed -i "s|\${JMS_CONNECTION_FACTORY_BROKER_URL}|$JMS_CONNECTION_FACTORY_BROKER_URL|g" /usr/local/tomcat/conf/context.xml
+
+cat /usr/local/tomcat/conf/context.xml

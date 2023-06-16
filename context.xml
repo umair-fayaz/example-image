@@ -1,0 +1,5 @@
+<Resource name="jms/ConnectionFactory" auth="Container"
+        type="${JMS_CONNECTION_FACTORY_TYPE}"
+        description="JMS Connection Factory"
+        factory="${JMS_CONNECTION_FACTORY_FACTORY}"
+        brokerURL="${JMS_CONNECTION_FACTORY_BROKER_URL}" />
