@@ -1,0 +1,16 @@
+name: Print Numbers
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print_numbers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Numbers
+        run: |
+          for i in $(seq 1 100); do
+            echo $i
+          done
