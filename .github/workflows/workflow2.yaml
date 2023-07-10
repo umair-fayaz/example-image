@@ -1,0 +1,18 @@
+name: Print More Numbers
+
+on:
+  workflow_run:
+    workflows:
+      - Print Numbers
+    types:
+      - completed
+
+jobs:
+  print_more_numbers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Numbers
+        run: |
+          for i in $(seq 101 200); do
+            echo $i
+          done
