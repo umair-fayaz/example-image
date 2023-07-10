@@ -5,7 +5,7 @@ on:
     workflows:
       - Print Numbers
     types:
-      - completed
+      - completed_successfully
 
 jobs:
   print_more_numbers:
